@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #f8f5f0;
+  color: #3a2e25;
+  line-height: 1.6;
+  padding: 1rem 1.5rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #5a4431;
+  margin-top: 1.5rem;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  margin-bottom: 1.25rem;
+}
+
+nav {
+  margin-bottom: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7a5e3c;
+  font-weight: 600;
+  margin-right: 1.5rem;
+  font-size: 1.1rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.15rem;
+  transition: border-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  border-color: #c7b299;
+}
+
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #7a6e65;
+  text-align: center;
+  border-top: 1px solid #ddd6c9;
+  padding-top: 1rem;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(58, 46, 37, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(58, 46, 37, 0.3);
+}
+
+/* Project Page */
+.project-image {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(58, 46, 37, 0.25);
+  margin-top: 1rem;
+}
+
+.project-description {
+  margin-top: 2rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+/* Link back to gallery */
+a.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  color: #7a5e3c;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+a.back-link:hover {
+  border-color: #c7b299;
+}
