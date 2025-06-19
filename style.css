@@ -12,13 +12,6 @@ body {
   margin-right: auto;
 }
 
-hr {
-	border: none;
-	border-top: 1px solid #ccc;
-	margin: 0 auto 20px auto;
-	width: 80%;
-}
-
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   color: #5a4431;
@@ -26,7 +19,9 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  border-bottom: 2px solid #c7b299; /* subtle underline */
+  padding-bottom: 0.3rem;
 }
 
 h2 {
