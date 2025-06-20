@@ -12,6 +12,22 @@ body {
   margin-right: auto;
 }
 
+.logo-text {
+  display: flex;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: #5a4431; /* match your headings */
+  gap: 0.5rem;
+  margin: 0; /* reset default margin */
+}
+
+.frog-icon {
+  height: 2.5rem; /* adjust size as needed */
+  width: auto;
+  display: inline-block;
+}
+
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   color: #5a4431;
