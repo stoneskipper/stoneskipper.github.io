@@ -1,0 +1,140 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap');
+
+/* General body styling: layout, typography, and color */
+body {
+  margin: 0 auto; /* Removes default margin and centers the content horizontally */
+  max-width: 1100px; /* Prevents lines from getting too wide on large screens */
+  padding: 1rem 1.5rem; /* Adds spacing inside the edges of the page (top/bottom, left/right) */
+  font-family: 'Open Sans', sans-serif; /* Sets the main font for body text */
+  background: #f8f5f0; /* Sets a soft, pale cream background color */
+  color: #3a2e25; /* Sets dark brown as the default text color */
+  line-height: 1.6; /* Adds spacing between lines of text for readability */
+}
+
+/* Site title area: layout and typography */
+.logo-text {
+  display: flex; /* Arranges the text and image in a row (horizontally) */
+  align-items: center; /* Vertically aligns items to the center */
+  font-family: 'Playfair Display', serif; /* Uses a classy serif font for contrast */
+  font-size: clamp(1.8rem, 4vw, 2.8rem); /* Responsive font size: scales with screen width */
+  color: #5a4431; /* Warmer brown color for headings/logo */
+  gap: 0.5rem; /* Adds space between text and frog logo */
+  margin: 0; /* Removes default margin on heading */
+}
+
+/* Optional: if you add a class to the frog image, this sets its size */
+.frog-icon {
+  height: 2.5rem; /* Sets a consistent logo height */
+  width: auto; /* Keeps aspect ratio proportional */
+}
+
+/* All heading styles: shared font and color */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif; /* Consistent serif for all headings */
+  color: #5a4431; /* Matches logo and creates visual hierarchy */
+  margin-top: 1.5rem; /* Adds space above headings */
+}
+
+/* H1 specific styles (site title) */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem); /* Responsive heading size */
+  border-bottom: 2px solid #c7b299; /* Subtle underline to separate from nav */
+  padding-bottom: 0.3rem; /* Adds a little space below the text and the line */
+}
+
+/* H2 (section titles) */
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem); /* Responsive sizing for subheadings */
+}
+
+/* Paragraph text */
+p {
+  font-size: clamp(1rem, 2vw, 1.15rem); /* Responsive text sizing for paragraphs */
+  margin-bottom: 1.25rem; /* Space between paragraphs */
+}
+
+/* Navigation area below the logo */
+nav {
+  margin-bottom: 2rem; /* Adds space between nav and the next section */
+}
+
+/* Styles for navigation links */
+nav a {
+  color: #7a5e3c; /* Warm brown text color for links */
+  font-weight: 600; /* Makes links stand out slightly more than body text */
+  margin-right: 1.5rem; /* Adds space between each link */
+  font-size: 1.1rem; /* Slightly larger text for nav links */
+  border-bottom: 2px solid transparent; /* Creates room for an underline that appears on hover */
+  padding-bottom: 0.15rem; /* Keeps underline from being too tight under the text */
+  text-decoration: none; /* Removes default underline */
+  transition: border-color 0.3s ease; /* Smooth effect when underline appears */
+}
+
+/* Hover and focus styles for nav links */
+nav a:hover,
+nav a:focus {
+  border-color: #c7b299; /* Shows an underline when hovered or focused */
+}
+
+/* Footer section at the bottom */
+footer {
+  margin-top: 4rem; /* Space above the footer */
+  padding-top: 1rem; /* Space inside the top of the footer */
+  font-size: 0.9rem; /* Slightly smaller text */
+  color: #7a6e65; /* Muted brown for footer text */
+  text-align: center; /* Center-aligns the text */
+  border-top: 1px solid #ddd6c9; /* Subtle line above the footer */
+}
+
+/* Responsive image gallery layout using CSS Grid */
+.gallery-grid {
+  display: grid; /* Turns the container into a grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive: as many columns as will fit */
+  gap: 1.25rem; /* Space between images */
+}
+
+/* Shared styles for images in the gallery */
+.gallery-grid img,
+.project-image {
+  width: 100%; /* Images fill their containers */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 6px; /* Slightly rounded corners */
+  box-shadow: 0 4px 12px rgba(58, 46, 37, 0.2); /* Soft shadow around image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth zoom/shadow effect on hover */
+}
+
+/* Slight zoom and stronger shadow on hover */
+.gallery-grid img:hover {
+  transform: scale(1.02); /* Zooms in slightly */
+  box-shadow: 0 6px 16px rgba(58, 46, 37, 0.3); /* Darker shadow when hovered */
+}
+
+/* Styles specific to full-width "project" images */
+.project-image {
+  max-height: 600px; /* Prevents images from getting too tall */
+  object-fit: cover; /* Crops edges rather than distorting image */
+  margin-top: 1rem; /* Space above the image */
+  box-shadow: 0 4px 12px rgba(58, 46, 37, 0.25); /* Slightly stronger shadow than gallery images */
+}
+
+/* Text block below project image */
+.project-description {
+  margin-top: 2rem; /* Space between image and text */
+  font-size: clamp(1rem, 2vw, 1.1rem); /* Responsive size */
+}
+
+/* Back-to-gallery or general action links */
+a.back-link {
+  display: inline-block; /* Allows margin and padding to apply */
+  margin-top: 2rem; /* Adds space above the link */
+  color: #7a5e3c; /* Same link color as nav */
+  font-weight: bold; /* Stands out a bit more */
+  border-bottom: 2px solid transparent; /* Preps for hover underline */
+  text-decoration: none; /* Removes default underline */
+  transition: border-color 0.3s ease; /* Smooth hover effect */
+}
+
+a.back-link:hover {
+  border-color: #c7b299; /* Underline appears when hovered */
+}
